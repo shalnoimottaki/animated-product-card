@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Boxicons CSS -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <!-- styles -->
+    <link rel="stylesheet" href="styles.css">
+    <title>Animated Product Card | ShalnoiMottaki</title>
+</head>
+<body>
+    <div class="product-card">
+        <div class="logo-cart">
+            <img src="./img/Adidas_Logo.png" alt="logo">
+            <i class='bx bx-shopping-bag'></i>
+        </div>
+        <div class="main-images">
+            <img id="white" class="white active" src="./img/real-madrid-white.jpg" alt="white">
+            <img id="black" class="black" src="./img/Real-Madrid-Third-Player-Jersey-2022-23.jpg" alt="black">
+            <img id="purple" class="purple" src="./img/real-madrid-purple.jpg" alt="purple">
+        </div>
+        <div class="shoe-details">
+            <span class="shoe_name">Real Madrid 2022-23 </span>
+            <p class="white active">Tradition gets a golden touch in the Real Madrid 23/24 Home Jersey.</p>
+            <p class="black">Tradition gets a golden touch in the Real Madrid 23/24 Away Jersey.</p>
+            <p class="purple">Tradition gets a golden touch in the Real Madrid 23/24 Third Jersey.</p>
+            <div class="stars">
+                <i class="bx bxs-star"></i>
+                <i class="bx bxs-star"></i>
+                <i class="bx bxs-star"></i>
+                <i class="bx bxs-star"></i>
+                <i class="bx bx-star"></i>
+            </div>
+        </div>
+        <div class="color-price">
+            <div class="color-option">
+                <span class="color">Color:</span>
+                <div class="circles">
+                    <span class="circle white active" id="white"></span>
+                    <span class="circle black" id="black"></span>
+                    <span class="circle purple" id="purple"></span>
+                </div>
+            </div>
+            <div class="price">
+                <span class="price_num">99.9£</span>
+                <span class="price_letter">Nine Euro only</span>
+            </div>
+        </div>
+        <div class="button">
+            <div class="button-layer"></div>
+            <button>Add To Cart</button>
+        </div>
+    </div>
+    <!-- javascript -->
+    <script src="script.js" defer></script>
+</body>
+</html>

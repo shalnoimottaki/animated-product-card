@@ -1,0 +1,200 @@
+/*
+=============== 
+Fonts
+===============
+*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+/*
+=============== 
+Variables
+===============
+*/
+:root {
+  --primary-color: linear-gradient(to left top, #43CBFF, #9708CC);
+  --black-color: linear-gradient(to right top, #161616 20%, #c7f043 80%);
+  --white-color: #fff;
+  --gray-color: #707070;
+  --grays-color: #333;
+  --purple-color: linear-gradient(to right top, #161616 10%, #6559ec 90%);
+  --green-color: #c9e27a;
+  --purpleV-color: rgb(116, 107, 218);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", "sans-serif";
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-card {
+  position: relative;
+  max-width: 355px;
+  width: 100%;
+  border-radius: 25px;
+  padding: 20px 30px 30px 30px;
+  background: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  z-index: 3;
+  overflow: hidden;
+}
+.product-card .logo-cart {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.product-card .logo-cart img {
+  height: 30px;
+  width: 45px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.product-card .logo-cart i {
+  font-size: 27px;
+  color: var(--gray-color);
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+.product-card .logo-cart i:hover {
+  color: var(--grays-color);
+}
+.product-card .main-images {
+  position: relative;
+  height: 310px;
+}
+.product-card .main-images img {
+  position: absolute;
+  height: 300px;
+  width: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  left: 12px;
+  top: -10px;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+.product-card .main-images img.active {
+  opacity: 1;
+}
+.product-card .shoe-details .shoe_name {
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--black-color);
+}
+.product-card .shoe-details p {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--grays-color);
+  text-align: justify;
+  display: none;
+}
+.product-card .shoe-details p.active {
+  display: block;
+}
+.product-card .shoe-details .stars i {
+  margin: 0 -1px;
+  color: var(--grays-color);
+}
+.product-card .color-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+.product-card .color-price .color-option {
+  display: flex;
+  align-items: center;
+}
+.product-card .color-price .color-option .color {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--grays-color);
+  margin-right: 8px;
+}
+.product-card .color-price .color-option .circles {
+  display: flex;
+}
+.product-card .color-price .color-option .circles .circle {
+  height: 18px;
+  width: 18px;
+  background: var(--white-color);
+  border-radius: 50%;
+  margin: 0 4px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+.product-card .color-price .color-option .circles .circle.white {
+  border: 1px solid var(--gray-color);
+}
+.product-card .color-price .color-option .circles .circle.white.active {
+  box-shadow: 0 0 0 1px var(--white-color), 0 0 0 2px var(--gray-color);
+}
+.product-card .color-price .color-option .circles .circle.black {
+  background: var(--black-color);
+}
+.product-card .color-price .color-option .circles .circle.black.active {
+  box-shadow: 0 0 0 1px var(--white-color), 0 0 0 3px var(--green-color);
+}
+.product-card .color-price .color-option .circles .circle.purple {
+  background: var(--purple-color);
+}
+.product-card .color-price .color-option .circles .circle.purple.active {
+  box-shadow: 0 0 0 1px var(--white-color), 0 0 0 3px var(--purpleV-color);
+}
+.product-card .color-price .price {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.product-card .color-price .price .price_num {
+  font-size: 23px;
+  font-weight: 600;
+  color: var(--gray-color);
+}
+.product-card .color-price .price .price_letter {
+  font-size: 9px;
+  font-weight: 600;
+  margin-top: -4px;
+  color: var(--gray-color);
+}
+.product-card .button {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  border-radius: 25px;
+  margin-top: 12px;
+  overflow: hidden;
+}
+.product-card .button .button-layer {
+  position: absolute;
+  height: 100%;
+  width: 300%;
+  left: -100%;
+  background-image: linear-gradient(135deg, #9708CC, #43CBFF, #9708CC, #43CBFF);
+  transition: all 0.4s ease;
+  border-radius: 25px;
+}
+.product-card .button:hover .button-layer {
+  left: 0;
+}
+.product-card .button button {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  background: none;
+  outline: none;
+  border: none;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--white-color);
+}/*# sourceMappingURL=styles.css.map */
